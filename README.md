@@ -13,15 +13,30 @@ Script from the https://github.com/Kecatoca/Zerologon_test is used to check the 
 
 ## Install
 ```
-
+git clone https://github.com/dinimus/dvs.git
+cd dvs
 pip3 install -r requirements.txt
 ```
-Also you need the Metasploit RPC Server (https://www.metasploit.com/). 
-  
 *templates_table_vuln.py* - page's template in Confluence. You can change it.  
   
 :warning:  
-If you need to create page in Confluence, you need to change the string 'SITE_CONFL' to your Confluence's hostname/IP in dvs.py. 
+If you need to create page in Confluence, you need to change the string 'SITE_CONFL' to your Confluence's hostname/IP in dvs.py.  
+
+### Tools
+Also you need:
+- Metasploit RPC Server (https://www.metasploit.com/)
+- Zerologon tester (https://github.com/Kecatoca/Zerologon_test), already downloaded  
+  
+For start Metasploit RPC Server:
+```
+msfrpcd -S -P yourpassword
+```
+Installing zerologon tester (requires Python 3.7 or higher):
+```
+cd dvs/CVE-2020-1472
+pip install -r requirements.txt
+pip install impacket
+```
 
 # Help
 ```
